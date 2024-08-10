@@ -177,7 +177,7 @@ input, select, textarea {
 		transition: border-bottom-color 0.25s ease-in-out;
 		text-decoration: none;
 		color: #000000;
-		border-bottom: dotted 1px;
+		/* border-bottom: dotted 1px; */
 	}
 
 		a:hover {
@@ -226,7 +226,11 @@ input, select, textarea {
 	h2 {
 		font-size: 1.25rem;
 		font-weight: 800;
-		margin: 0 0 2rem 0;
+		margin: 2rem 0 2rem 0;
+		background-color: #eab7fc;
+		padding: 10px 0px;
+		text-align: center;
+		border-radius: 12px;
 	}
 
 	h3 {
@@ -1043,7 +1047,7 @@ input, select, textarea {
 			height: 100%;
 			left: 0;
 			position: absolute;
-			top: 0;
+			top: 14%;
 			width: 100%;
 		}
 
@@ -1373,6 +1377,69 @@ input, select, textarea {
 
 			.intro-video {
 				width: 100%;
+			}
+
+			.links {
+				width: 90%;
+				display: flex;
+    			align-items: center;
+			}
+			
+			.links a {
+				margin-left: 20px;
+				font-weight: 500;
+				display: inline-block;
+				vertical-align: middle;
+				-webkit-transform: perspective(1px) translateZ(0);
+				transform: perspective(1px) translateZ(0);
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.links a i::before{
+				color: #6a0d82;
+			}
+			
+			.links a:before{
+				content: "";
+				position: absolute;
+				z-index: -1;
+				left: 51%;
+				right: 51%;
+				bottom: 0;
+				background: #781c8b;
+				height: 3px;
+				border-radius: 17px;
+				transition-property: left, right;
+				transition-duration: 0.2s;
+				transition-timing-function: ease-in-out;
+			}
+			
+			.links a:hover:before{
+			   left: 0;
+			   right: 0;
+			   transition-timing-function: ease-in;
+			}
+			
+			.logo {
+				width: 10%;
+			}
+
+			.nav-bar{
+				width: 100%;
+				display: flex;
+				flex-direction: row-reverse;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				padding: 0 15px;
+				padding-top: 10px;
+			}
+
+			.nav-bar img{
+				width: 75px;
 			}
 
 /* Arrow */
@@ -1896,6 +1963,15 @@ input, select, textarea {
 
 		@media screen and (max-width: 1152px) {
 
+			.nav-bar {
+				padding-top: 10px;
+				flex-direction: row;
+			}
+
+			.links {
+				justify-content: end;
+			}
+
 			#wrapper {
 				padding: 0;
 			}
@@ -2112,4 +2188,15 @@ input, select, textarea {
 			padding: 4rem;
 		}
 
+	}
+
+	@media screen and (max-width: 400px) {
+		.links {
+			display: none;
+		}
+
+		.logo{
+			width: 100%;
+			text-align: center;
+		}
 	}
