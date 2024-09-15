@@ -1057,7 +1057,39 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				object-position: bottom;
 			}
+
+		.mb {
+			margin-bottom: 2rem;
+		}
+
+		.name-ul{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			border-bottom: 1px solid #000000;
+			margin-bottom: 10px;
+		}
+
+		.name-ul p {
+			padding: 2px;
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
+
+		.name-ul p::first-letter {
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 21px;
+			padding-left: 2px;
+			color: #6a0d82;
+		}
+
+		#about{
+			margin-top: 30px;
+		}
 
 /* List */
 
@@ -1742,6 +1774,10 @@ input, select, textarea {
 					.gallery a.portrait img {
 						height: 30rem;
 					}
+					
+					.name-ul{
+						justify-content: space-around
+					}
 
 		}
 
@@ -1906,7 +1942,7 @@ input, select, textarea {
 			}
 
 		#wrapper section {
-			margin: 7.5rem 0 0 0;
+			margin: 5.5rem 0 0 0;
 		}
 
 
